@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,11 +34,10 @@
         <div class="ex1">
             <div class="ex2">
                 <h1>もぐらたたき＜難しい＞</h1>
+                <p><b>ようこそ<c:out value="${userName}"/>さん</b></p>
 
                 <form action="/AD171521/Mogura3" method="post">
                     <input id="a" type="hidden" name="sc" value="0">
-                    <input type="submit" name="logout" value="保存" >
-
                 </form>
 
 
@@ -81,10 +80,11 @@
                                 face = 2;
                                 setTimeout("mogura(2)", 250);
                             } else if (face == 2) {
-                                document.images[imageplace].src = img[2].src;//超
+                                document.images[imageplace].src = img[0].src;//超
                                 face = 3;
                                 setTimeout("mogura(2)", 250);
                             } else {
+                            	face=4;
                                 setTimeout("mogura(3)", 250);
                             }
 
@@ -160,7 +160,7 @@
                         mogura(0)">
                     </form>
 
-                    <a href="/HelloAppEngine">ログアウトする</a>
+                    <a href="/Logout">ログアウトする</a>
 
             </div>
         </div>

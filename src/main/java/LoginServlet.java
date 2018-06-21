@@ -51,6 +51,8 @@ public class LoginServlet extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         String username = request.getParameter("username");
+        HttpSession session=request.getSession();
+        session.setAttribute("userName",username);//usernameをuserIdセッションに
       // ListSet.set(username);
         RequestDispatcher dispatcher
         = request.getRequestDispatcher("/mogura.jsp");
