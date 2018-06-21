@@ -1,20 +1,39 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Hello App Engine</title>
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>モグラたたき</title>
+        <style>
+            .ex1 {/*親要素*/
+                background:#9acd32;
 
-  <body>
-    <h1>Hello App Engine!</h1>
-  
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href='/HelloAppEngine'>The servlet</a></td>
-      </tr>
-    </table>
-  </body>
+                position: relative;
+                height: 400px;
+
+            }
+
+
+            .ex2{
+                background: #98fb98;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%,-50%);
+                -webkit-transform : translate(-50%,-50%);
+                transform : translate(-50%,-50%);
+                width: 300px;
+                text-align: center;/*一応BOX内の文字も中央寄せ*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="ex1">
+            <div class="ex2">
+                <img src="mogu2.png"> <br>
+                <td><a href= "/HelloAppEngine"  >クリックしてください</a>    </td>   <br>
+                <br>
+            </div>
+        </div>
+    </body>
 </html>
