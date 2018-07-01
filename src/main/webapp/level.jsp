@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,10 +33,12 @@
     <body>
         <div class="ex1">
             <div class="ex2">
-                <img src="mogu2.png"> <br>
-                <td><a href= "/HelloAppEngine"  >クリックしてください!</a>    </td>   <br>
-                <br>
+            <p><b>ようこそ<c:out value="${userName}"/>さん</b></p>
+                モグラたたきのレベルを選んでね<br>
+                <a href="/Mogura1">易しい</a><br>
+                <a href="/Mogura2">普通</a><br>
+                <a href="/Mogura3">難しい</a><br>
+
             </div>
         </div>
-    </body>
 </html>

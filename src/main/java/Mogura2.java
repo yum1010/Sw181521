@@ -1,8 +1,6 @@
 
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,21 +8,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class Mogura2
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
-	
+@WebServlet("/Mogura2")
+public class Mogura2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
-     *
      */
-    public LoginServlet() {
+    public Mogura2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,11 +29,9 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-       
-
-
-
+		RequestDispatcher dispatcher
+        = request.getRequestDispatcher("/mogura2.jsp");
+dispatcher.forward(request, response);
 		
 	}
 
@@ -47,19 +40,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		// リクエストパラメータの取得
-
-        request.setCharacterEncoding("UTF-8");
-        String username = request.getParameter("username");
-        HttpSession session=request.getSession();
-        session.setAttribute("userName",username);//usernameをuserIdセッションに
-      // ListSet.set(username);
-        RequestDispatcher dispatcher
-        = request.getRequestDispatcher("/level.jsp");
-dispatcher.forward(request, response);
-
-
-
+		
 	}
 
 }
