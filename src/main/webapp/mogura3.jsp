@@ -5,7 +5,7 @@
 <html>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>モグラたたき(簡単)</title>
+        <title>モグラたたき(難しい)</title>
         <style>
             .ex1 {/*親要素*/
 
@@ -33,7 +33,7 @@
     <body>
         <div class="ex1">
             <div class="ex2">
-                <h1>もぐらたたき＜簡単＞</h1>
+                <h1>もぐらたたき＜難しい＞</h1>
                 <p><b>ようこそ<c:out value="${userName}"/>さん</b></p>
 
                 <script type="text/javascript">
@@ -54,7 +54,7 @@
 
                     function mogura(n) {
 
-                        count = count - 0.5;
+                        count = count - 0.25;
                         document.f1.t3.value = Math.floor(count);
                         //if(count==0) break;
 
@@ -68,19 +68,19 @@
                                 imageplace = parseInt(Math.random() * 100) % 14;
                                 document.images[imageplace].src = img[2].src;//超出す
                                 face = 1;
-                                setTimeout("mogura(1)", 500);
+                                setTimeout("mogura(1)", 250);
 
                             } else if (face == 1) {
                                 document.images[imageplace].src = img[1].src;//少し
                                 face = 2;
-                                setTimeout("mogura(2)", 500);
+                                setTimeout("mogura(2)", 250);
                             } else if (face == 2) {
                                 document.images[imageplace].src = img[0].src;//超
                                 face = 3;
-                                setTimeout("mogura(2)", 500);
+                                setTimeout("mogura(2)", 250);
                             } else {
                             	face=4;
-                                setTimeout("mogura(3)", 500);
+                                setTimeout("mogura(3)", 250);
                             }
 
                         }
@@ -106,11 +106,15 @@
                             console.log("hitできてる");
 
 
+
+
                         }
 
                     }
-                    
-  </script>
+
+
+
+                </script>
 
                 <form name="f1"><table cellspacing="0"><tr>
                             <th colspan="5"><input type="text" name="t3" value="Ready?" size="16" readonly>
@@ -118,16 +122,28 @@
                             <td>&emsp;&emsp;&emsp;<img src="mogu0.gif" onMouseDown="hit(0)"></td>
                             <td><img src="mogu0.gif" onMouseDown="hit(1)"></td>
                             <td><img src="mogu0.gif" onMouseDown="hit(2)"></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(3)"></td>
                         </tr><tr>
-                            <td>&emsp;&emsp;&emsp; <img src="mogu0.gif" onMouseDown="hit(3)"></td>
-                            <td><img src="mogu0.gif" onMouseDown="hit(4)"></td>
-                            <td><img src="mogu0.gif" onMouseDown="hit(5)">  </td>
-                        </tr><tr>
-                            <td>&emsp;&emsp;&emsp;<img src="mogu0.gif" onMouseDown="hit(5)"></td>
+                            <td>&emsp;&emsp;&emsp;<img src="mogu0.gif" onMouseDown="hit(4)"></td>
+                            <td></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(5)"></td>
                             <td><img src="mogu0.gif" onMouseDown="hit(6)"></td>
                             <td><img src="mogu0.gif" onMouseDown="hit(7)"></td>
-                        </tr></table>
-                    <br>
+                        </tr><tr>
+                            <td>&emsp;&emsp;&emsp;<img src="mogu0.gif" onMouseDown="hit(8)"></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(9)"></td>
+                            <td></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(10)"></td>
+                        </tr><tr>
+                            <td>&emsp;&emsp;&emsp;</td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(11)"></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(12)"></td>
+                            <td></td>
+                            <td><img src="mogu0.gif" onMouseDown="hit(13)"></td>
+                        </tr>
+
+                    </table><br>
+                    <form>
                         <input type="button" name="startBtn" value="スタート" onClick="disabled = true;
                         mogura(0)">
                     </form>
